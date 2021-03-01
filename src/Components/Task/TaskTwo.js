@@ -26,7 +26,7 @@ const TaskTwo = () => {
         addTaskHandler={addTaskHandler}
       />
       <br />
-      {date}
+      {/* {date} */}
       <br/>
       <ul>
         {taskList.map((item, index) => {

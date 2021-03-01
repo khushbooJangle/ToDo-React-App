@@ -1,7 +1,9 @@
 import React from "react";
 import AddBoxIcon from '@material-ui/icons/AddBox';
+import '../Style.css';
 
 const TaskInput = (props) => {
+  
   const handleKeypress =(e) =>{
     if (e.code === "Enter") {
       props.addTaskHandler();
@@ -9,7 +11,9 @@ const TaskInput = (props) => {
   }
   return (
     <>
+    <div className="input_container" >
       <input
+        className="input_task"
         type="text"
         placeholder="Enter your task"
         name="task"
@@ -18,9 +22,8 @@ const TaskInput = (props) => {
         autoComplete="off"
         onKeyPress = {handleKeypress}
       />
-      <br />
-      {/* <input type="date" name="date" onChange={props.inputHandler} /> */}
-      <button onClick={props.addTaskHandler}> <AddBoxIcon /></button>
+      <button onClick={props.addTaskHandler}> <AddBoxIcon fontSize="large" /></button>
+      </div>
     </>
   );
 };

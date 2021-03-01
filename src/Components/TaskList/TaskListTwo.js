@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../Style.css";
+import "../Style.css";
 
 const TaskListTwo = (props) => {
   const [completedTask, setCompletedTask] = useState(false);
@@ -11,16 +12,20 @@ const TaskListTwo = (props) => {
 
   return (
     <>
-      <span>
+      <div>
         <label
           className="container"
           style={{ textDecoration: completedTask ? "line-through" : "none" }}
         >
-          <input type="checkbox" onClick={completedTaskHandler} disabled={isdisabled} />
+          <input
+            type="checkbox"
+            onClick={completedTaskHandler}
+            disabled={isdisabled}
+          />
           {props.task}
           <span className="checkmark"></span>
         </label>
-      </span>
+      </div>
     </>
   );
 };
