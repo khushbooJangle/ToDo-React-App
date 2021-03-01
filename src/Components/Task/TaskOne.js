@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import TaskInput from "./TaskInput";
-import TaskList from "./TaskList";
+import TaskInput from "../TaskInput/TaskInput";
+import TaskListOne from "../TaskList/TaskListOne";
 
-const Task = () => {
+const TaskOne = () => {
   const [inputTask, setInputTask] = useState();
   const [taskList, setTaskList] = useState([]);
   const date = new Date().toLocaleString();
@@ -15,7 +15,7 @@ const Task = () => {
     setTaskList((prevItem) => {
       return [...prevItem, inputTask];
     });
-    setInputTask(" ");
+    setInputTask("");
   };
 
   const removeTaskHandler = (id) => {
@@ -36,10 +36,10 @@ const Task = () => {
       <br />
       {date}
       <br/>
-      <ol>
+      <ul>
         {taskList.map((item, index) => {
           return (
-            <TaskList
+            <TaskListOne
               task={item}
               removeTaskClick={removeTaskHandler}
               key={index}
@@ -47,9 +47,9 @@ const Task = () => {
             />
           );
         })}
-      </ol>
+      </ul>
     </>
   );
 };
 
-export default Task;
+export default TaskOne;

@@ -1,6 +1,12 @@
 import React from "react";
+import AddBoxIcon from '@material-ui/icons/AddBox';
 
 const TaskInput = (props) => {
+  const handleKeypress =(e) =>{
+    if (e.code === "Enter") {
+      props.addTaskHandler();
+    }
+  }
   return (
     <>
       <input
@@ -9,9 +15,12 @@ const TaskInput = (props) => {
         name="task"
         onChange={props.inputHandler}
         value={props.inputTask}
+        autoComplete="off"
+        onKeyPress = {handleKeypress}
       />
+      <br />
       {/* <input type="date" name="date" onChange={props.inputHandler} /> */}
-      <button onClick={props.addTaskHandler}>Add task</button>
+      <button onClick={props.addTaskHandler}> <AddBoxIcon /></button>
     </>
   );
 };

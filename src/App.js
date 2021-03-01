@@ -1,10 +1,10 @@
 import React from "react";
-import Task from "./Components/Task";
+import Main from "./Main";
 
 const App = () => {
   return (
     <>
-      <Task />
+      <Main />
     </>
   );
 };
