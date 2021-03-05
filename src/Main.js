@@ -7,21 +7,23 @@ import "./Components/Style.css";
 
 const Main = () => {
   return (
-    <>
+    <> 
+    <div className="main">
       <Header />
 
       <div className="main_container">
         <div className="task_one_container">
-          <h3>Type-1</h3>
+          <h2>Delete Items on List</h2>
           <TaskOne />
         </div>
         <br />
         <div className="task_two_container">
-          <h3>Type-2</h3>
+          <h2>Strike-Off Items on List</h2>
           <TaskTwo />
         </div>
       </div>
       <Footer />
+      </div>
     </>
   );
 };

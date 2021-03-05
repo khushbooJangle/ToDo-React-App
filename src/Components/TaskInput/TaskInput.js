@@ -22,7 +22,7 @@ const TaskInput = (props) => {
         autoComplete="off"
         onKeyPress = {handleKeypress}
       />
-      <button onClick={props.addTaskHandler}> <AddBoxIcon fontSize="large" /></button>
+      <button onClick={props.addTaskHandler} className="add_button" > <AddBoxIcon fontSize="large" /></button>
       </div>
     </>
   );

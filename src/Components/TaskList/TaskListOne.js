@@ -7,12 +7,12 @@ const TaskListOne = (props) => {
     <>
       <div>
         <li className="list">
-          <button
+          <button className="remove_button"
             onClick={() => {
               props.removeTaskClick(props.id);
             }}
           >
-            <RemoveCircleIcon  />
+            <RemoveCircleIcon  style={{color:"rgb(244, 159, 244)"}} />
           </button>
           <span>
           {props.task}

@@ -1,13 +1,51 @@
+/* Main File */
+
+.task_one_container {
+  border: solid;
+  margin: 10px 20px;
+  padding: 10px 15px;
+  text-align: center;
+  flex: 1;
+  overflow-y: auto;
+  height: 600px;
+  background-color: rgb(237, 199, 237);
+  border-radius: 10px;
+  border-width: 10px;
+  border-color: gray;
+}
+.task_two_container {
+  border: solid;
+  margin: 10px 20px;
+  padding: 10px 15px;
+  text-align: center;
+  flex: 1;
+  overflow-y: auto;
+  height: 600px;
+  background-color: rgb(224, 235, 201);
+  border-radius: 10px;
+  border-width: 10px;
+  border-color: gray;
+}
+.main_container {
+  display: flex;
+  padding-bottom: 65px;
+  padding-top: 25px;
+}
+.main{
+  background-color: rgb(104, 104, 104);
+}
+
 /* Header File */
 
 .main_header {
   margin: 0px;
-  margin-bottom: 30px;
-  color: brown;
-  background-color: lavender;
+  /* margin-bottom: 30px; */
+  color: white;
+  /* background-color: lavender; */
 }
 .header {
   padding: 40px 30px;
+  text-align: center;
 }
 
 /* TaskInput File */
@@ -22,58 +60,21 @@
   outline: none;
   padding: 10px;
 }
-button {
+.add_button {
   height: fit-content;
   align-self: center;
-  background-color: white;
+  background-color: #eee;
   border: none;
   cursor: pointer;
+  padding: 8px 15px;
 }
 
 .input_container {
   display: inline-flex;
 }
 
-/* Footer File */
-footer {
-  background-color: lavender;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2rem;
-  text-align: center;
-}
 
-/* Main File */
-
-.task_one_container {
-  border: solid;
-  margin: 10px 20px;
-  padding: 10px 15px;
-  text-align: center;
-  flex: 1;
-  overflow-y: auto;
-  height: 600px;
-}
-.task_two_container {
-  border: solid;
-  margin: 10px 20px;
-  padding: 10px 15px;
-  text-align: center;
-  flex: 1;
-  overflow-y: auto;
-  height: 600px;
-}
-.main_container {
-  display: flex;
-  margin-bottom: 50px;
-}
-
-.task_one_container:first-child {
-  margin-right: 20px;
-}
-
+/* TaskListOne File */
 ul {
   list-style-type: none;
   text-align: start;
@@ -83,8 +84,11 @@ ul {
   margin: 0px 0px 12px;
   padding: 0 0 0 35px;
 }
+.remove_button{
+  margin-right: 20px;
+}
 
-/* Customize the label (the container) */
+/* TaskListTwo File */
 .container {
   display: block;
   position: relative;
@@ -98,7 +102,6 @@ ul {
   user-select: none;
 }
 
-/* Hide the browser's default checkbox */
 .container input {
   position: absolute;
   opacity: 0;
@@ -107,7 +110,6 @@ ul {
   width: 0;
 }
 
-/* Create a custom checkbox */
 .checkmark {
   position: absolute;
   top: 0;
@@ -117,29 +119,24 @@ ul {
   background-color: #eee;
 }
 
-/* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
-/* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #2196f3;
+  background-color: rgba(107, 156, 7, 0.714);
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the checkmark when checked */
 .container input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the checkmark/indicator */
 .container .checkmark:after {
   left: 9px;
   top: 5px;
@@ -150,4 +147,15 @@ ul {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+/* Footer File */
+footer {
+  background-color: rgb(104, 104, 104);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+  text-align: center;
 }
